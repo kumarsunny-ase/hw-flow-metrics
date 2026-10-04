@@ -1,0 +1,5 @@
+build/
+reports/
+metrics.db
+__pycache__/
+.venv/

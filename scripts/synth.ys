@@ -1,0 +1,7 @@
+# Yosys synthesis script: generic gate-level synthesis of the counter.
+read_verilog rtl/counter.v
+synth -top counter
+# Human-readable report and a machine-readable JSON report for the pipeline
+tee -o build/synth_stat.txt stat
+tee -q -o build/synth_stat.json stat -json
+write_verilog -noattr build/counter_netlist.v
